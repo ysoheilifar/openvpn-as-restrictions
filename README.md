@@ -6,3 +6,10 @@ The free version of OpenVPN Access Server has a connection limit: only two clien
 
 > [!NOTE]
 > This method work on server running [ubuntu 20.04 LTS](https://releases.ubuntu.com/focal/) or [debian 10](https://releases.ubuntu.com/focal/](https://cdimage.debian.org/debian-cd/project/build/10.13.0/)https://cdimage.debian.org/debian-cd/project/build/10.13.0/)
+
+### Let's Start
+```bash
+apt install zip unzip
+apt install python3-pip
+pip install uncompyle6
+```
