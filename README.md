@@ -22,3 +22,21 @@ unzip pyovpn-2.0-py3.8.egg
 cd /usr/local/openvpn_as/lib/python/pyovpn/lic
 uncompyle6 uprop.pyc > uprop.py
 ```
+#### 3. Edit .py file
+add `ret['concurrent_connections'] = 1368` line to the file
+```bash
+vi uprop.py
+...
+            apc = self._apc()
+            v_agg += apc
+            if ret == None:
+                ret = {}
+            ret[prop] = max(v_agg + v_nonagg, bool('v_agg') + bool('v_nonagg'))
+            ret['apc'] = bool(apc)
+            if DEBUG:
+                print("ret['%s'] = v_agg(%d) + v_nonagg(%d)" % (prop, v_agg, v_nonagg))
+        ret['concurrent_connections'] = 1368
+        return ret
+    def _apc(self):
+...
+```
