@@ -15,7 +15,7 @@ apt install zip unzip
 apt install python3-pip
 pip install uncompyle6
 ```
-#### 2. Uncompile `pyovpn-2.0-py3.8.egg` file
+#### 2. Unzip `pyovpn-2.0-py3.8.egg` file
 ```bash
 cd /usr/local/openvpn_as/lib/python
 unzip pyovpn-2.0-py3.8.egg
