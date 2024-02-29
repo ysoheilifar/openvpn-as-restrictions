@@ -1,4 +1,8 @@
 # bypass OpenVPN Access Server restrictions
+
+> [!CAUTION]
+> This method for education purposes
+
 ### What is OpenVPN Access Server
 OpenVPN Access Server is a convenient tool that is installed on the server in a couple of commands and allows you to comfortably work with clients: change subnets, profiles, passwords and other settings. Doing all this manually would be much more difficult.
 
@@ -6,7 +10,7 @@ The free version of OpenVPN Access Server has a connection limit: only two clien
 
 > [!CAUTION]
 > This method work on server running [ubuntu 20.04 LTS](https://releases.ubuntu.com/focal/) or [debian 10](https://releases.ubuntu.com/focal/](https://cdimage.debian.org/debian-cd/project/build/10.13.0/)https://cdimage.debian.org/debian-cd/project/build/10.13.0/)
-> because to do this, we will use the uncompyle6 utility, which works great with Python versions 2.7, 3.7, 3.8
+> because to do this, we will use the uncompyle6 utility, which works great with Python versions 2.7, 3.7, 3.8.
 
 ### Let's Start
 #### 1. Install prerequisites
