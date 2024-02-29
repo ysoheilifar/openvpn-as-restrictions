@@ -15,4 +15,4 @@ apt install python3-pip
 pip install uncompyle6
 ```
 > [!NOTE]
-> To do this, we will use the decompile6 utility, which works great with Python versions 2.7, 3.7, 3.8
+> To do this, we will use the uncompyle6 utility, which works great with Python versions 2.7, 3.7, 3.8
