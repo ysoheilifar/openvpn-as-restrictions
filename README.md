@@ -6,6 +6,7 @@ The free version of OpenVPN Access Server has a connection limit: only two clien
 
 > [!NOTE]
 > This method work on server running [ubuntu 20.04 LTS](https://releases.ubuntu.com/focal/) or [debian 10](https://releases.ubuntu.com/focal/](https://cdimage.debian.org/debian-cd/project/build/10.13.0/)https://cdimage.debian.org/debian-cd/project/build/10.13.0/)
+> because to do this, we will use the uncompyle6 utility, which works great with Python versions 2.7, 3.7, 3.8
 
 ### Let's Start
 #### 1. Install prerequisites
@@ -14,5 +15,3 @@ apt install zip unzip
 apt install python3-pip
 pip install uncompyle6
 ```
-> [!NOTE]
-> To do this, we will use the uncompyle6 utility, which works great with Python versions 2.7, 3.7, 3.8
