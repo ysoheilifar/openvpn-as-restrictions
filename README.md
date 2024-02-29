@@ -44,7 +44,7 @@ vi uprop.py
     def _apc(self):
 ...
 ```
-#### 4. Compile file again
+#### 4. Compile file
 ```bash
 python3 -m compileall uprop.py
 rm uprop.pyc uprop.py
