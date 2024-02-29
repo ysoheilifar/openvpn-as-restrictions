@@ -22,7 +22,7 @@ unzip pyovpn-2.0-py3.8.egg
 cd /usr/local/openvpn_as/lib/python/pyovpn/lic
 uncompyle6 uprop.pyc > uprop.py
 ```
-#### 3. Edit .py file
+#### 3. Edit `uprop.py` file
 add `ret['concurrent_connections'] = 1368` line to the file
 ```bash
 vi uprop.py
