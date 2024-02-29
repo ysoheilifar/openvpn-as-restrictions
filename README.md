@@ -15,7 +15,7 @@ apt install zip unzip
 apt install python3-pip
 pip install uncompyle6
 ```
-#### 2. Uncompyle `pyovpn-2.0-py3.8.egg` file
+#### 2. Uncompile `pyovpn-2.0-py3.8.egg` file
 ```bash
 cd /usr/local/openvpn_as/lib/python
 unzip pyovpn-2.0-py3.8.egg
@@ -39,4 +39,21 @@ vi uprop.py
         return ret
     def _apc(self):
 ...
+```
+#### 4. Compile file again
+```bash
+python3 -m compileall uprop.py
+rm uprop.pyc uprop.py
+cp __pycache__/uprop.cpython-38.pyc ./uprop.pyc
+rm -Rf __pycache__
+sudo rm /usr/local/openvpn_as/lib/python/pyovpn-2.0-py3.8.egg
+zip pyovpn pyovpn-2.0-py3.8.egg
+```
+#### 5. Restart service and remove log files
+```bash
+service openvpnas stop
+rm /var/log/openvpnas.log
+touch /var/log/openvpnas.log
+service openvpnas start
+cat /var/log/openvpnas.log
 ```
