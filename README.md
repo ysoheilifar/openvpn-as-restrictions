@@ -19,14 +19,16 @@ apt install zip unzip
 apt install python3-pip
 pip install uncompyle6
 ```
-#### 2. Unzip `pyovpn-2.0-py3.8.egg` file
+#### 2. Unzip & uncompile file
+Unzip `pyovpn-2.0-py3.8.egg` file and uncompile `uprop.pyc` file
 ```bash
 cd /usr/local/openvpn_as/lib/python
 unzip pyovpn-2.0-py3.8.egg
 cd /usr/local/openvpn_as/lib/python/pyovpn/lic
 uncompyle6 uprop.pyc > uprop.py
 ```
-#### 3. Edit `uprop.py` file
+#### 3. Edit file
+Edit `uprop.py` file
 add `ret['concurrent_connections'] = 1368` line to the file
 ```bash
 vi uprop.py
