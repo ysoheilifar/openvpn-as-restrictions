@@ -1,7 +1,7 @@
 # bypass OpenVPN Access Server restrictions
 
 > [!CAUTION]
-> This method for education purposes.
+> This method for educational purposes.
 
 ### What is OpenVPN Access Server
 OpenVPN Access Server is a convenient tool that is installed on the server in a couple of commands and allows you to comfortably work with clients: change subnets, profiles, passwords and other settings. Doing all this manually would be much more difficult.
