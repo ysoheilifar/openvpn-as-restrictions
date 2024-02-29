@@ -28,8 +28,7 @@ cd /usr/local/openvpn_as/lib/python/pyovpn/lic
 uncompyle6 uprop.pyc > uprop.py
 ```
 #### 3. Edit file
-Edit `uprop.py` file
-add `ret['concurrent_connections'] = 1368` line to the file
+Edit `uprop.py` file, add `ret['concurrent_connections'] = 1368` line to the file
 ```bash
 vi uprop.py
 ...
