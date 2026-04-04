@@ -21,6 +21,8 @@ pip install uncompyle6
 ```
 #### 2. Unzip & uncompile file
 Unzip `pyovpn-2.0-py3.12.egg` file and uncompile `uprop.pyc` file
+> [!NOTE]
+> You also can use [pylingual.io](https://pylingual.io) for decompile file
 ```bash
 cd /usr/local/openvpn_as/lib/python
 unzip pyovpn-2.0-py3.12.egg
