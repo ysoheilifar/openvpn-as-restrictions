@@ -20,12 +20,14 @@ apt install python3-pip
 pip install uncompyle6
 ```
 #### 2. Unzip & uncompile file
-Unzip `pyovpn-2.0-py3.8.egg` file and uncompile `uprop.pyc` file
+Unzip `pyovpn-2.0-py3.12.egg` file and uncompile `uprop.pyc` file
 ```bash
 cd /usr/local/openvpn_as/lib/python
-unzip pyovpn-2.0-py3.8.egg
+unzip pyovpn-2.0-py3.12.egg
+python3 -m venv venv
+source venv/bin/activate
 cd /usr/local/openvpn_as/lib/python/pyovpn/lic
-bach -c uncompyle6 uprop.pyc > uprop.py
+uncompyle6 uprop.pyc > uprop.py
 ```
 #### 3. Edit file
 Add `ret['concurrent_connections'] = 1368` line to `uprop.py` file
@@ -44,15 +46,25 @@ vi uprop.py
         return ret
     def _apc(self):
 ...
+    def _apc(self):
+        # irreducible cflow, using cdg fallback
+        # ***<module>.UsageProperties._apc: Failure: Compilation Error
+        pcs = AWSInfo.get_product_code()
+        if pcs:
+            return pcs['snoitcennoCtnerrucnoc'[::(-1)]]
+        if DEBUG:
+            print(Passthru('UsageProperties._apc'))
+        return 0
+    @staticmethod
 ```
 #### 4. Compile file
 ```bash
 python3 -m compileall uprop.py
 rm uprop.pyc uprop.py
-cp __pycache__/uprop.cpython-38.pyc ./uprop.pyc
+cp __pycache__/uprop.cpython-312.pyc ./uprop.pyc
 rm -Rf __pycache__
-sudo rm /usr/local/openvpn_as/lib/python/pyovpn-2.0-py3.8.egg
-zip pyovpn pyovpn-2.0-py3.8.egg
+sudo rm /usr/local/openvpn_as/lib/python/pyovpn-2.0-py3.12.egg
+zip pyovpn pyovpn-2.0-py3.12.egg
 ```
 #### 5. Restart service and remove log files
 ```bash
