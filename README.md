@@ -67,7 +67,8 @@ rm uprop.pyc uprop.py
 cp __pycache__/uprop.cpython-312.pyc ./uprop.pyc
 rm -Rf __pycache__
 sudo rm /usr/local/openvpn_as/lib/python/pyovpn-2.0-py3.12.egg
-zip pyovpn pyovpn-2.0-py3.12.egg
+cd /usr/local/openvpn_as/lib/python
+zip pyovpn-2.0-py3.12.egg pyovpn
 ```
 #### 5. Restart service and remove log files
 ```bash
