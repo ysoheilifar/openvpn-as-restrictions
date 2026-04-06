@@ -18,7 +18,7 @@ The free version of OpenVPN Access Server has a connection limit: only two clien
 apt install zip unzip
 apt install python3-pip
 pip install uncompyle6
-apt install python3.12-venv
+apt install python3-venv
 ```
 #### 2. Unzip & uncompile file
 Unzip `pyovpn-2.0-py3.12.egg` file and uncompile `uprop.pyc` file
