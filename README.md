@@ -12,6 +12,27 @@ The free version of OpenVPN Access Server has a connection limit: only two clien
 > This method work on server running [ubuntu 20.04 LTS](https://releases.ubuntu.com/focal/) or [debian 10](https://releases.ubuntu.com/focal/](https://cdimage.debian.org/debian-cd/project/build/10.13.0/)https://cdimage.debian.org/debian-cd/project/build/10.13.0/)
 > because to do this, we will use the uncompyle6 utility, which works great with Python versions 2.7, 3.7, 3.8.
 
+> [!WARNING]
+> **Python versions above 3.8**
+>
+> If the OpenVPN Access Server package uses **Python 3.9 or newer**, the `uncompyle6` decompile/recompile workflow described below will not work.
+>
+> For Python versions above 3.8:
+>
+> - Only make a backup/copy of the original `.egg` file.
+> - Do not try to decompile the `.pyc` files with `uncompyle6`.
+> - Do not try to recompile the modified files using this method.
+> - Keep the original `.egg` file so you can restore it if needed.
+>
+> Example backup:
+>
+> ```bash
+> sudo cp /usr/local/openvpn_as/lib/python/pyovpn-*.egg \
+>     /usr/local/openvpn_as/lib/python/pyovpn-backup.egg
+> ```
+>
+> The decompile/recompile instructions below are only applicable when the bytecode version is supported by the decompiler being used.
+
 ### Let's Start
 #### 1. Install prerequisites
 ```bash
